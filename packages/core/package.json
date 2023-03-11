@@ -1,0 +1,25 @@
+{
+  "name": "@thaneyang-cli-dev/core",
+  "version": "1.0.0",
+  "description": "thaneyang-cli-dev core",
+  "author": "杨志威 <yangzw@yuanbaopu.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com"
+  },
+  "scripts": {
+    "test": "node ./__tests__/core.test.js"
+  },
+  "dependencies": {
+    "@thaneyang-cli-dev/utils": "^1.0.0"
+  }
+}
