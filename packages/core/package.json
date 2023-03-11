@@ -1,13 +1,13 @@
 {
   "name": "@thaneyang-cli-dev/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "thaneyang-cli-dev core",
   "author": "杨志威 <yangzw@yuanbaopu.com>",
   "homepage": "",
   "license": "ISC",
   "main": "lib/core.js",
   "bin": {
-    "thane-cli-dev": "bin/index.js"
+    "thaneyang-cli-dev": "bin/index.js"
   },
   "directories": {
     "lib": "lib",
@@ -24,6 +24,6 @@
     "test": "node ./__tests__/core.test.js"
   },
   "dependencies": {
-    "@thaneyang-cli-dev/utils": "^1.0.0"
+    "@thaneyang-cli-dev/utils": "^1.0.1"
   }
 }

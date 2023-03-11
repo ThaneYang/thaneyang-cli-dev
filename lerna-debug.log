@@ -1,0 +1,44 @@
+0 silly argv { _: [ 'version' ], lernaVersion: '6.5.1', '$0': 'lerna' }
+1 notice cli v6.5.1
+2 verbose rootPath /Users/yzw/test-projects2023/yzw-cli-dev/thaneyang-cli-dev
+3 info current version 1.0.0
+4 silly isAnythingCommitted
+5 verbose isAnythingCommitted 1
+6 silly getCurrentBranch
+7 verbose currentBranch master
+8 silly remoteBranchExists
+9 silly isBehindUpstream
+10 silly isBehindUpstream master is behind origin/master by 0 commit(s) and ahead by 0
+11 silly hasTags
+12 verbose hasTags false
+13 info Assuming all packages changed
+14 verbose updated @thaneyang-cli-dev/core
+15 verbose updated @thaneyang-cli-dev/utils
+16 verbose git-describe undefined => "8f2f70d"
+17 silly git-describe parsed => {"refCount":"3","sha":"8f2f70d","isDirty":false}
+18 info execute Skipping releases
+19 silly lifecycle No script for "preversion" in "thaneyang-cli-dev", continuing
+20 silly lifecycle No script for "preversion" in "@thaneyang-cli-dev/utils", continuing
+21 verbose version @thaneyang-cli-dev/utils has no lockfile. Skipping lockfile update.
+22 silly lifecycle No script for "version" in "@thaneyang-cli-dev/utils", continuing
+23 silly lifecycle No script for "preversion" in "@thaneyang-cli-dev/core", continuing
+24 verbose version @thaneyang-cli-dev/core has no lockfile. Skipping lockfile update.
+25 silly lifecycle No script for "version" in "@thaneyang-cli-dev/core", continuing
+26 verbose version Updating root package-lock.json
+27 silly lifecycle No script for "version" in "thaneyang-cli-dev", continuing
+28 silly gitAdd [
+28 silly gitAdd   'packages/utils/package.json',
+28 silly gitAdd   'packages/core/package.json',
+28 silly gitAdd   'lerna.json',
+28 silly gitAdd   'package-lock.json'
+28 silly gitAdd ]
+29 error Error: Command failed with exit code 1: git add -- packages/utils/package.json packages/core/package.json lerna.json package-lock.json
+29 error The following paths are ignored by one of your .gitignore files:
+29 error package-lock.json
+29 error hint: Use -f if you really want to add them.
+29 error hint: Turn this message off by running
+29 error hint: "git config advice.addIgnoredFile false"
+29 error     at makeError (/usr/local/lib/node_modules/lerna/node_modules/_execa@5.1.1@execa/lib/error.js:60:11)
+29 error     at handlePromise (/usr/local/lib/node_modules/lerna/node_modules/_execa@5.1.1@execa/index.js:118:26)
+29 error     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+29 error     at async Promise.all (index 0)
