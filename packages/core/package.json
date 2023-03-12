@@ -17,7 +17,6 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmmirror.com",
     "access": "public"
   },
   "scripts": {
@@ -26,5 +25,5 @@
   "dependencies": {
     "@thaneyang-cli-dev/utils": "^1.0.2"
   },
-  "gitHead": "b43722070c1d061da1c83104014aa5ca4161e571"
+  "gitHead": "8fa9047f60fc67d3e2700c5a4f95d186b16ed9c3"
 }
