@@ -1,6 +1,6 @@
 {
   "name": "@thaneyang-cli-dev/core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "thaneyang-cli-dev core",
   "author": "杨志威 <yangzw@yuanbaopu.com>",
   "homepage": "",
@@ -23,7 +23,7 @@
     "test": "node ./__tests__/core.test.js"
   },
   "dependencies": {
-    "@thaneyang-cli-dev/utils": "^1.0.2"
+    "@thaneyang-cli-dev/utils": "^1.0.5"
   },
   "gitHead": "8fa9047f60fc67d3e2700c5a4f95d186b16ed9c3"
 }
