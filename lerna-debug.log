@@ -11,7 +11,7 @@
 34 error npm ERR! enoent
 34 error
 34 error npm ERR! A complete log of this run can be found in:
-34 error npm ERR!     /Users/yzw/.npm/_logs/2023-09-08T10_34_22_647Z-debug.log
+34 error npm ERR!     /Users/yzw/.npm/_logs/2023-09-08T10_40_10_146Z-debug.log
 34 error     at makeError (/usr/local/lib/node_modules/lerna/node_modules/_execa@5.1.1@execa/lib/error.js:60:11)
 34 error     at handlePromise (/usr/local/lib/node_modules/lerna/node_modules/_execa@5.1.1@execa/index.js:118:26)
 34 error     at processTicksAndRejections (internal/process/task_queues.js:93:5)
