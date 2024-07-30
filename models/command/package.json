@@ -1,6 +1,6 @@
 {
   "name": "@thaneyang-cli-dev/command",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "thaneyang-cli-dev command",
   "author": "thaneyang <269392251@qq.com>",
   "homepage": "",
@@ -24,8 +24,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
+    "@thaneyang-cli-dev/log": "file:../../utils/log",
     "colors": "^1.4.0",
-    "semver": "^7.3.4",
-    "@thaneyang-cli-dev/log": "file:../../utils/log"
+    "semver": "^7.3.4"
   }
 }

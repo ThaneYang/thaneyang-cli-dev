@@ -1,6 +1,6 @@
 {
   "name": "@thaneyang-cli-dev/exec",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "thaneyang-cli-dev execute package",
   "author": "thaneyang <269392251@qq.com>",
   "homepage": "",
@@ -24,8 +24,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@thaneyang-cli-dev/package": "file:../../models/package",
     "@thaneyang-cli-dev/log": "file:../../utils/log",
+    "@thaneyang-cli-dev/package": "file:../../models/package",
     "@thaneyang-cli-dev/utils": "file:../../utils/utils"
   }
 }
