@@ -1,0 +1,26 @@
+{
+  "name": "thaneyang-cli-dev",
+  "version": "1.0.0",
+  "description": "thaneyang-cli dev",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "workspaces": [
+    "core/cli",
+    "core/exec",
+    "commands/init",
+    "models/command",
+    "models/package",
+    "utils/format-path",
+    "utils/get-npm-info",
+    "utils/log",
+    "utils/request",
+    "utils/utils"
+  ]
+}
