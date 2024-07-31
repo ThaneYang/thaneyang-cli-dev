@@ -1,5 +1,5 @@
 {
-  "name": "@thaneyang-cli-dev/request",
+  "name": "@yzw-cli-dev/request",
   "version": "1.0.1",
   "description": "> TODO: description",
   "author": "thaneyang <269392251@qq.com>",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.imooc.com/class-110/thaneyang-cli-dev.git"
+    "url": "https://git.imooc.com/class-110/yzw-cli-dev.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"

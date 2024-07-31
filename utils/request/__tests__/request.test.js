@@ -2,6 +2,6 @@
 
 const request = require('..');
 
-describe('@thaneyang-cli-dev/request', () => {
+describe('@yzw-cli-dev/request', () => {
     it('needs tests');
 });

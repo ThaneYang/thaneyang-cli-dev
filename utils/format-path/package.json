@@ -1,5 +1,5 @@
 {
-  "name": "@thaneyang-cli-dev/format-path",
+  "name": "@yzw-cli-dev/format-path",
   "version": "1.0.1",
   "description": "format path",
   "author": "thaneyang <269392251@qq.com>",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.imooc.com/class-110/thaneyang-cli-dev.git"
+    "url": "https://git.imooc.com/class-110/yzw-cli-dev.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"

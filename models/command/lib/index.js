@@ -2,7 +2,7 @@
 
 const semver = require('semver');
 const colors = require('colors/safe');
-const log = require('@thaneyang-cli-dev/log');
+const log = require('@yzw-cli-dev/log');
 
 const LOWEST_NODE_VERSION = '12.0.0';
 

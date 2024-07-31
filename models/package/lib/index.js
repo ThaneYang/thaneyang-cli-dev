@@ -5,9 +5,9 @@ const fse = require('fs-extra');
 const pkgDir = require('pkg-dir').sync;
 const pathExists = require('path-exists').sync;
 const npminstall = require('npminstall');
-const { isObject } = require('@thaneyang-cli-dev/utils');
-const formatPath = require('@thaneyang-cli-dev/format-path');
-const { getDefaultRegistry, getNpmLatestVersion } = require('@thaneyang-cli-dev/get-npm-info');
+const { isObject } = require('@yzw-cli-dev/utils');
+const formatPath = require('@yzw-cli-dev/format-path');
+const { getDefaultRegistry, getNpmLatestVersion } = require('@yzw-cli-dev/get-npm-info');
 
 class Package {
   constructor(options) {

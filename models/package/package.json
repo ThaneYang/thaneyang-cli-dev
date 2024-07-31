@@ -1,7 +1,7 @@
 {
-  "name": "@thaneyang-cli-dev/package",
+  "name": "@yzw-cli-dev/package",
   "version": "1.0.1",
-  "description": "thaneyang-cli-dev npm modules",
+  "description": "yzw-cli-dev npm modules",
   "author": "thaneyang <269392251@qq.com>",
   "homepage": "",
   "license": "ISC",
@@ -18,15 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.imooc.com/class-110/thaneyang-cli-dev.git"
+    "url": "https://git.imooc.com/class-110/yzw-cli-dev.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@thaneyang-cli-dev/format-path": "file:../../utils/format-path",
-    "@thaneyang-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
-    "@thaneyang-cli-dev/utils": "file:../../utils/utils",
+    "@yzw-cli-dev/format-path": "file:../../utils/format-path",
+    "@yzw-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
+    "@yzw-cli-dev/utils": "file:../../utils/utils",
     "fs-extra": "^9.0.1",
     "npminstall": "^4.10.0",
     "path-exists": "^4.0.0",

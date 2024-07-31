@@ -2,6 +2,6 @@
 
 const formatPath = require('..');
 
-describe('@thaneyang-cli-dev/format-path', () => {
+describe('@yzw-cli-dev/format-path', () => {
     it('needs tests');
 });

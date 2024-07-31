@@ -2,6 +2,6 @@
 
 const init = require('..');
 
-describe('@thaneyang-cli-dev/init', () => {
+describe('@yzw-cli-dev/init', () => {
     it('needs tests');
 });

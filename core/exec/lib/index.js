@@ -1,9 +1,9 @@
 'use strict';
 
 const path = require('path');
-const Package = require('@thaneyang-cli-dev/package');
-const log = require('@thaneyang-cli-dev/log');
-const { exec: spawn } = require('@thaneyang-cli-dev/utils');
+const Package = require('@yzw-cli-dev/package');
+const log = require('@yzw-cli-dev/log');
+const { exec: spawn } = require('@yzw-cli-dev/utils');
 
 const SETTINGS = {
   init: '@imooc-cli/init',

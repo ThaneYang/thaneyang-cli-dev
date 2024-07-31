@@ -8,10 +8,10 @@ const glob = require('glob');
 const ejs = require('ejs');
 const semver = require('semver');
 const userHome = require('user-home');
-const Command = require('@thaneyang-cli-dev/command');
-const Package = require('@thaneyang-cli-dev/package');
-const log = require('@thaneyang-cli-dev/log');
-const { spinnerStart, sleep, execAsync } = require('@thaneyang-cli-dev/utils');
+const Command = require('@yzw-cli-dev/command');
+const Package = require('@yzw-cli-dev/package');
+const log = require('@yzw-cli-dev/log');
+const { spinnerStart, sleep, execAsync } = require('@yzw-cli-dev/utils');
 
 const getProjectTemplate = require('./getProjectTemplate');
 
@@ -191,8 +191,8 @@ class InitCommand extends Command {
   async downloadTemplate() {
     const { projectTemplate } = this.projectInfo;
     const templateInfo = this.template.find(item => item.npmName === projectTemplate);
-    const targetPath = path.resolve(userHome, '.thaneyang-cli-dev', 'template');
-    const storeDir = path.resolve(userHome, '.thaneyang-cli-dev', 'template', 'node_modules');
+    const targetPath = path.resolve(userHome, '.yzw-cli-dev', 'template');
+    const storeDir = path.resolve(userHome, '.yzw-cli-dev', 'template', 'node_modules');
     const { npmName, version } = templateInfo;
     this.templateInfo = templateInfo;
     const templateNpm = new Package({

@@ -2,6 +2,6 @@
 
 const exec = require('..');
 
-describe('@thaneyang-cli-dev/exec', () => {
+describe('@yzw-cli-dev/exec', () => {
     it('needs tests');
 });

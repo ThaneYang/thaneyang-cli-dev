@@ -1,4 +1,4 @@
-const request = require('@thaneyang-cli-dev/request');
+const request = require('@yzw-cli-dev/request');
 
 module.exports = function () {
   return request({

@@ -1,7 +1,7 @@
 {
-  "name": "@thaneyang-cli-dev/log",
+  "name": "@yzw-cli-dev/log",
   "version": "1.0.1",
-  "description": "thaneyang-cli-dev log",
+  "description": "yzw-cli-dev log",
   "keywords": [
     "log"
   ],
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitee.com:sam9831/thaneyang-cli-dev.git"
+    "url": "git@gitee.com:sam9831/yzw-cli-dev.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"

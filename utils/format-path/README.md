@@ -1,11 +1,11 @@
-# `@thaneyang-cli-dev/format-path`
+# `@yzw-cli-dev/format-path`
 
 > TODO: description
 
 ## Usage
 
 ```
-const formatPath = require('@thaneyang-cli-dev/format-path');
+const formatPath = require('@yzw-cli-dev/format-path');
 
 // TODO: DEMONSTRATE API
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "@thaneyang-cli-dev/get-npm-info",
+  "name": "@yzw-cli-dev/get-npm-info",
   "version": "1.0.1",
   "description": "get npm info",
   "author": "thaneyang <269392251@qq.com>",
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@gitee.com:sam9831/thaneyang-cli-dev.git"
+    "url": "git@gitee.com:sam9831/yzw-cli-dev.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"

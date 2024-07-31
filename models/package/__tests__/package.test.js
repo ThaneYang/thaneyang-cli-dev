@@ -2,6 +2,6 @@
 
 // const package = require('..');
 
-describe('@thaneyang-cli-dev/package', () => {
+describe('@yzw-cli-dev/package', () => {
     it('needs tests');
 });

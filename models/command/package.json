@@ -1,7 +1,7 @@
 {
-  "name": "@thaneyang-cli-dev/command",
+  "name": "@yzw-cli-dev/command",
   "version": "1.0.1",
-  "description": "thaneyang-cli-dev command",
+  "description": "yzw-cli-dev command",
   "author": "thaneyang <269392251@qq.com>",
   "homepage": "",
   "license": "ISC",
@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.imooc.com/class-110/thaneyang-cli-dev.git"
+    "url": "https://git.imooc.com/class-110/yzw-cli-dev.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@thaneyang-cli-dev/log": "file:../../utils/log",
+    "@yzw-cli-dev/log": "file:../../utils/log",
     "colors": "^1.4.0",
     "semver": "^7.3.4"
   }

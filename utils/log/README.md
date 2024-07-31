@@ -1,11 +1,11 @@
-# `@thaneyang-cli-dev/log`
+# `@yzw-cli-dev/log`
 
 > TODO: description
 
 ## Usage
 
 ```
-const log = require('@thaneyang-cli-dev/log');
+const log = require('@yzw-cli-dev/log');
 
 // TODO: DEMONSTRATE API
 ```
