@@ -8,8 +8,8 @@ const colors = require('colors/safe');
 const userHome = require('user-home');
 const pathExists = require('path-exists').sync;
 const commander = require('commander');
-const log = require('@thaneyang-cli-dev/log');
-const exec = require('@thaneyang-cli-dev/exec');
+const log = require('@yzw-cli-dev/log');
+const exec = require('@yzw-cli-dev/exec');
 
 const constant = require('./const');
 const pkg = require('../package.json');
@@ -36,6 +36,9 @@ function registerCommand() {
     .option('-d, --debug', '是否开启调试模式', false)
     .option('-tp, --targetPath <targetPath>', '是否指定本地调试文件路径', '');
 
+  console.log('program debug', program.debug)
+
+  // [可选] <必选>
   program
     .command('init [projectName]')
     .option('-f, --force', '是否强制初始化项目')
@@ -69,7 +72,7 @@ function registerCommand() {
 
   if (program.args && program.args.length < 1) {
     program.outputHelp();
-    console.log();
+    console.log('program.opts', program.opts());
   }
 }
 
@@ -82,10 +85,13 @@ async function prepare() {
 }
 
 async function checkGlobalUpdate() {
+  // registry.npmjs.org/@yzw-cli-dev/get-npm-info
+  // registry.npmjs.org/@imooc-cli-dev/core
   const currentVersion = pkg.version;
   const npmName = pkg.name;
-  const { getNpmSemverVersion } = require('@thaneyang-cli-dev/get-npm-info');
+  const { getNpmSemverVersion } = require('@yzw-cli-dev/get-npm-info');
   const lastVersion = await getNpmSemverVersion(currentVersion, npmName);
+  console.log('lastVersion', lastVersion)
   if (lastVersion && semver.gt(lastVersion, currentVersion)) {
     log.warn(colors.yellow(`请手动更新 ${npmName}，当前版本：${currentVersion}，最新版本：${lastVersion}
                 更新命令： npm install -g ${npmName}`));
@@ -113,9 +119,11 @@ function createDefaultConfig() {
     cliConfig['cliHome'] = path.join(userHome, constant.DEFAULT_CLI_HOME);
   }
   process.env.CLI_HOME_PATH = cliConfig.cliHome;
+  console.log('process.env.CLI_HOME_PATH', process.env.CLI_HOME_PATH)
 }
 
 function checkUserHome() {
+  console.log('userHome', userHome)
   if (!userHome || !pathExists(userHome)) {
     throw new Error(colors.red('当前登录用户主目录不存在！'));
   }
@@ -124,6 +132,7 @@ function checkUserHome() {
 function checkRoot() {
   const rootCheck = require('root-check');
   rootCheck();
+  console.log(process.geteuid()) // 0代表root
 }
 
 function checkPkgVersion() {

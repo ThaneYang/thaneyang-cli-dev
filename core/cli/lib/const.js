@@ -1,4 +1,4 @@
-const DEFAULT_CLI_HOME = '.thaneyang-cli-dev';
+const DEFAULT_CLI_HOME = '.yzw-cli-dev';
 
 module.exports = {
   DEFAULT_CLI_HOME,
