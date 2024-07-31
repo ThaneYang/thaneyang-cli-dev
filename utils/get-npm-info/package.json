@@ -13,9 +13,12 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "git@gitee.com:sam9831/yzw-cli-dev.git"
+    "url": "https://github.com/ThaneYang/thaneyang-cli-dev.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
