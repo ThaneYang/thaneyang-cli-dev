@@ -1,6 +1,6 @@
 {
 	"name": "@yzw-cli-dev/core",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "yzw-cli-dev core",
 	"author": "thaneyang <269392251@qq.com>",
 	"homepage": "",
@@ -17,10 +17,10 @@
 		"lib"
 	],
 	"dependencies": {
-		"@yzw-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
 		"@yzw-cli-dev/exec": "file:../exec",
-		"@yzw-cli-dev/log": "file:../../utils/log",
+		"@yzw-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
 		"@yzw-cli-dev/init": "file:../../commands/init",
+		"@yzw-cli-dev/log": "file:../../utils/log",
 		"colors": "^1.4.0",
 		"commander": "^6.2.1",
 		"dotenv": "^8.2.0",
