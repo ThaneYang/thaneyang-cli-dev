@@ -36,8 +36,6 @@ function registerCommand() {
     .option('-d, --debug', '是否开启调试模式', false)
     .option('-tp, --targetPath <targetPath>', '是否指定本地调试文件路径', '');
 
-  console.log('program debug', program.debug)
-
   // [可选] <必选>
   program
     .command('init [projectName]')
@@ -46,6 +44,7 @@ function registerCommand() {
 
   // 开启debug模式
   program.on('option:debug', function () {
+    console.log('program debug', program.debug)
     if (program.debug) {
       process.env.LOG_LEVEL = 'verbose';
     } else {
@@ -81,7 +80,7 @@ async function prepare() {
   checkRoot();
   checkUserHome();
   checkEnv();
-  await checkGlobalUpdate();
+  // await checkGlobalUpdate();
 }
 
 async function checkGlobalUpdate() {
