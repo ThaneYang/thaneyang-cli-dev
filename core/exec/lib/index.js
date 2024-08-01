@@ -50,6 +50,7 @@ async function exec() {
     });
   }
   const rootFile = pkg.getRootFilePath();
+  console.log('rootFile', rootFile)
   if (rootFile) {
     try {
       // 在当前进程中调用
@@ -67,6 +68,7 @@ async function exec() {
       });
       args[args.length - 1] = o;
       const code = `require('${rootFile}').call(null, ${JSON.stringify(args)})`;
+      console.log('code', code)
       const child = spawn('node', ['-e', code], {
         cwd: process.cwd(),
         stdio: 'inherit',

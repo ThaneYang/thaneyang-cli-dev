@@ -8,7 +8,7 @@ const npminstall = require('npminstall');
 const { isObject } = require('@yzw-cli-dev/utils');
 const formatPath = require('@yzw-cli-dev/format-path');
 const { getDefaultRegistry, getNpmLatestVersion } = require('@yzw-cli-dev/get-npm-info');
-
+console.log('package')
 class Package {
   constructor(options) {
     if (!options) {

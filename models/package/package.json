@@ -31,5 +31,6 @@
     "npminstall": "^4.10.0",
     "path-exists": "^4.0.0",
     "pkg-dir": "^5.0.0"
-  }
+  },
+  "gitHead": "8eb98a1206bab92d0bfcc51e40cf688ef0913e9f"
 }

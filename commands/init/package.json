@@ -37,5 +37,6 @@
     "semver": "^7.3.4",
     "spinner": "^0.3.4",
     "user-home": "^2.0.0"
-  }
+  },
+  "gitHead": "8eb98a1206bab92d0bfcc51e40cf688ef0913e9f"
 }

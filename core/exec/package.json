@@ -27,5 +27,6 @@
     "@yzw-cli-dev/log": "file:../../utils/log",
     "@yzw-cli-dev/package": "file:../../models/package",
     "@yzw-cli-dev/utils": "file:../../utils/utils"
-  }
+  },
+  "gitHead": "8eb98a1206bab92d0bfcc51e40cf688ef0913e9f"
 }
