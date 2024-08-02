@@ -8,7 +8,7 @@ const npminstall = require('npminstall');
 const { isObject } = require('@yzw-cli-dev/utils');
 const formatPath = require('@yzw-cli-dev/format-path');
 const { getDefaultRegistry, getNpmLatestVersion } = require('@yzw-cli-dev/get-npm-info');
-console.log('package')
+
 class Package {
   constructor(options) {
     if (!options) {
@@ -60,7 +60,7 @@ class Package {
   async install() {
     await this.prepare();
     return npminstall({
-      root: this.targetPath,
+      root: this.targetPath, // 模块路径
       storeDir: this.storeDir,
       registry: getDefaultRegistry(),
       pkgs: [{
@@ -98,10 +98,11 @@ class Package {
   getRootFilePath() {
     function _getRootFile(targetPath) {
       // 1. 获取package.json所在目录
-      const dir = pkgDir(targetPath);
+      console.log('package targetPath**', targetPath)
+      const dir = pkgDir(targetPath); // 获取package.json所在的目录
       if (dir) {
         // 2. 读取package.json
-        const pkgFile = require(path.resolve(dir, 'package.json'));
+        const pkgFile = require(path.resolve(dir, 'package.json')); // require可以读取js json node
         // 3. 寻找main/lib
         if (pkgFile && pkgFile.main) {
           // 4. 路径的兼容(macOS/windows)
