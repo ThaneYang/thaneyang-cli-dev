@@ -44,7 +44,7 @@ function registerCommand() {
 
   // 开启debug模式
   program.on('option:debug', function () {
-    console.log('program debug', program.debug)
+    // console.log('program debug', program.debug)
     if (program.debug) {
       process.env.LOG_LEVEL = 'verbose';
     } else {
