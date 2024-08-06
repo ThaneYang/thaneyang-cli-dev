@@ -1,6 +1,6 @@
 {
   "name": "@yzw-cli-dev/init",
-  "version": "1.0.6",
+  "version": "1.0.3",
   "description": "yzw-cli-dev init",
   "author": "thaneyang <269392251@qq.com>",
   "homepage": "",
@@ -24,11 +24,11 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@yzw-cli-dev/command": "file:../../models/command",
-    "@yzw-cli-dev/log": "file:../../utils/log",
-    "@yzw-cli-dev/package": "file:../../models/package",
-    "@yzw-cli-dev/request": "file:../../utils/request",
-    "@yzw-cli-dev/utils": "file:../../utils/utils",
+    "@yzw-cli-dev/command": "^1.0.5",
+    "@yzw-cli-dev/log": "^1.0.4",
+    "@yzw-cli-dev/package": "^1.0.5",
+    "@yzw-cli-dev/request": "^1.0.4",
+    "@yzw-cli-dev/utils": "^1.0.4",
     "ejs": "^3.1.5",
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
@@ -38,5 +38,5 @@
     "spinner": "^0.3.4",
     "user-home": "^2.0.0"
   },
-  "gitHead": "8eb98a1206bab92d0bfcc51e40cf688ef0913e9f"
+  "gitHead": "12424d082e880493a3cc402425c8ec66b0b19d8d"
 }
