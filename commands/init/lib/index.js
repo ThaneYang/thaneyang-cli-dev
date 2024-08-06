@@ -89,8 +89,9 @@ class InitCommand extends Command {
         throw new Error('命令不存在！命令：' + command);
       }
       const args = cmdArray.slice(1);
+      // npm ['install']
       ret = await execAsync(cmd, args, {
-        stdio: 'inherit',
+        stdio: 'inherit', // 在子进程中执行，在主进程中打印
         cwd: process.cwd(),
       });
     }
@@ -103,8 +104,9 @@ class InitCommand extends Command {
   async ejsRender(options) {
     const dir = process.cwd();
     const projectInfo = this.projectInfo;
+    log.verbose('ejsRender projectInfo', projectInfo);
     return new Promise((resolve, reject) => {
-      // 获取所有文件
+      // 通过glob获取所有文件
       glob('**', {
         cwd: dir,
         ignore: options.ignore || '',
@@ -143,8 +145,9 @@ class InitCommand extends Command {
     await sleep();
     try {
       const templatePath = path.resolve(this.templateNpm.cacheFilePath, 'template');
+      log.verbose('templatePath', this.templatePath);
       const targetPath = process.cwd();
-      fse.ensureDirSync(templatePath);
+      fse.ensureDirSync(templatePath); // 确保目录存在
       fse.ensureDirSync(targetPath);
       fse.copySync(templatePath, targetPath);
     } catch (e) {
