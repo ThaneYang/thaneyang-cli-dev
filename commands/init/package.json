@@ -1,6 +1,6 @@
 {
   "name": "@yzw-cli-dev/init",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "yzw-cli-dev init",
   "author": "thaneyang <269392251@qq.com>",
   "homepage": "",
@@ -26,7 +26,7 @@
   "dependencies": {
     "@yzw-cli-dev/command": "^1.0.5",
     "@yzw-cli-dev/log": "^1.0.4",
-    "@yzw-cli-dev/package": "^1.0.5",
+    "@yzw-cli-dev/package": "^1.0.4",
     "@yzw-cli-dev/request": "^1.0.4",
     "@yzw-cli-dev/utils": "^1.0.4",
     "ejs": "^3.1.5",
