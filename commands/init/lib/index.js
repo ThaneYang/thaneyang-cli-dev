@@ -147,6 +147,7 @@ class InitCommand extends Command {
       const templatePath = path.resolve(this.templateNpm.cacheFilePath, 'template');
       log.verbose('templatePath', this.templatePath);
       const targetPath = process.cwd();
+      log.verbose('targetPath', targetPath);
       fse.ensureDirSync(templatePath); // 确保目录存在
       fse.ensureDirSync(targetPath);
       fse.copySync(templatePath, targetPath);

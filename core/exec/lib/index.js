@@ -6,7 +6,7 @@ const log = require('@yzw-cli-dev/log');
 const { exec: spawn } = require('@yzw-cli-dev/utils');
 
 const SETTINGS = {
-  init: '@yzw-cli-dev/format-path', // 当不传targetpath，则可以在这里配置，不同的命令下载不同的包
+  init: '@yzw-cli-dev/init', // 当不传targetpath，则可以在这里配置，不同的命令下载不同的包
 };
 
 const CACHE_DIR = 'dependencies';
@@ -38,14 +38,18 @@ async function exec() {
       packageName,
       packageVersion,
     });
+    // console.log('pkg', pkg)
     if (await pkg.exists()) {
+      log.verbose('更新package');
       // 更新package
       await pkg.update();
     } else {
       // 安装package
+      log.verbose('安装package');
       await pkg.install();
     }
   } else {
+    log.verbose('targetPath3', targetPath);
     pkg = new Package({
       targetPath,
       packageName,

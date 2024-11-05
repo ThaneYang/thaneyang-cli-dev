@@ -17,10 +17,10 @@
 		"lib"
 	],
 	"dependencies": {
-		"@yzw-cli-dev/exec": "^1.0.4",
-		"@yzw-cli-dev/get-npm-info": "^1.0.4",
-		"@yzw-cli-dev/init": "^1.0.6",
-		"@yzw-cli-dev/log": "^1.0.4",
+		"@yzw-cli-dev/exec": "file:../exec",
+		"@yzw-cli-dev/get-npm-info": "file:../../utils/get-npm-info",
+		"@yzw-cli-dev/init": "file:../../commands/init",
+		"@yzw-cli-dev/log": "file:../../utils/log",
 		"colors": "^1.4.0",
 		"commander": "^6.2.1",
 		"dotenv": "^8.2.0",
@@ -31,7 +31,7 @@
 		"semver": "^7.3.4",
 		"user-home": "^2.0.0"
 	},
-	"gitHead": "12424d082e880493a3cc402425c8ec66b0b19d8d",
+	"gitHead": "812684db0d0fa3a6f8a04028863afef97865dce3",
 	"publishConfig": {
 		"access": "public"
 	}

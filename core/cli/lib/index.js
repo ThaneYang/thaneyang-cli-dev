@@ -81,7 +81,7 @@ async function prepare() {
   checkRoot();
   checkUserHome();
   checkEnv();
-  // await checkGlobalUpdate();
+  await checkGlobalUpdate();
 }
 
 async function checkGlobalUpdate() {
@@ -89,7 +89,7 @@ async function checkGlobalUpdate() {
   // registry.npmjs.org/@imooc-cli-dev/core
   const currentVersion = pkg.version;
   const npmName = pkg.name;
-  const { getNpmSemverVersion } = require('@yzw-cli-dev/get-npm-info');
+  const { getNpmSemverVersion } = require('@yzw-cli-dev/core');
   const lastVersion = await getNpmSemverVersion(currentVersion, npmName);
   console.log('lastVersion', lastVersion)
   if (lastVersion && semver.gt(lastVersion, currentVersion)) {

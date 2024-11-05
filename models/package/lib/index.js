@@ -11,6 +11,7 @@ const { getDefaultRegistry, getNpmLatestVersion } = require('@yzw-cli-dev/get-np
 
 class Package {
   constructor(options) {
+    console.log('package options', options)
     if (!options) {
       throw new Error('Package类的options参数不能为空！');
     }
@@ -49,6 +50,7 @@ class Package {
   // 判断当前Package是否存在
   async exists() {
     if (this.storeDir) {
+      console.log('this.cacheFilePath', this.cacheFilePath)
       await this.prepare();
       return pathExists(this.cacheFilePath);
     } else {
@@ -59,9 +61,15 @@ class Package {
   // 安装Package
   async install() {
     await this.prepare();
+    console.log('安装this.targetPath', this.targetPath)
+    console.log('安装this.storeDir', this.storeDir)
+    console.log('安装this.packageName', this.packageName)
+    // this.packageVersion = '1.0.9' // init这个包有点奇怪，临时设置版本号
+    console.log('安装this.packageVersion', this.packageVersion)
     return npminstall({
       root: this.targetPath, // 模块路径
       storeDir: this.storeDir,
+      // registry: getDefaultRegistry(true), // init这个包有点奇怪，所以改为临时从官方镜像源中下载
       registry: getDefaultRegistry(),
       pkgs: [{
         name: this.packageName,
@@ -75,6 +83,7 @@ class Package {
     await this.prepare();
     // 1. 获取最新的npm模块版本号
     const latestPackageVersion = await getNpmLatestVersion(this.packageName);
+    console.log('latestPackageVersion', latestPackageVersion)
     // 2. 查询最新版本号对应的路径是否存在
     const latestFilePath = this.getSpecificCacheFilePath(latestPackageVersion);
     // 3. 如果不存在，则直接安装最新版本

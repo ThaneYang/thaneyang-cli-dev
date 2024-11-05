@@ -9,3 +9,15 @@ const init = require('@yzw-cli-dev/init');
 
 // TODO: DEMONSTRATE API
 ```
+
+```
+const init = require('@yzw-cli-dev/init');
+
+// TODO: DEMONSTRATE API
+```
+
+```
+const init = require('@yzw-cli-dev/init');
+
+// TODO: DEMONSTRATE API
+```

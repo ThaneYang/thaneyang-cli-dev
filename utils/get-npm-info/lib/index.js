@@ -10,14 +10,24 @@ function getNpmInfo(npmName, registry) {
   }
   const registryUrl = registry || getDefaultRegistry();
   const npmInfoUrl = urlJoin(registryUrl, npmName);
-  return axios.get(npmInfoUrl).then(response => {
-    if (response.status === 200) {
-      return response.data;
+  console.log('npmInfoUrl', npmInfoUrl)
+  return axios.get(npmInfoUrl).then(function (response) {
+    try {
+      if (response.status === 200) {
+        return response.data;
+      }
+    } catch (error) {
+      return Promise.reject(error);
     }
-    return null;
-  }).catch(err => {
-    return Promise.reject(err);
   });
+  // return axios.get(npmInfoUrl).then(response => {
+  //   if (response.status === 200) {
+  //     return response.data;
+  //   }
+  //   return null;
+  // }).catch(err => {
+  //   return Promise.reject(err);
+  // });
 }
 
 function getDefaultRegistry(isOriginal = false) {
