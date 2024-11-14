@@ -26,7 +26,7 @@
   "dependencies": {
     "@yzw-cli-dev/command": "file:../../models/command",
     "@yzw-cli-dev/log": "file:../../utils/log",
-    ​"@yzw-cli-dev/package": "file:../../models/package",
+    "@yzw-cli-dev/package": "file:../../models/package",
     "@yzw-cli-dev/request": "file:../../utils/request",
     "@yzw-cli-dev/utils": "file:../../utils/utils",
     "ejs": "^3.1.5",
