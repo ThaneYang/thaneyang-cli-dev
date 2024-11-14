@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-console.log('运行成功', __filename)
+console.log('运行成功2', __filename)
 
 // 先执行到全局的lerna里面
 const importLocal = require('import-local');

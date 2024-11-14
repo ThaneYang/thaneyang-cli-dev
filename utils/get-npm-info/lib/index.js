@@ -8,15 +8,16 @@ function getNpmInfo(npmName, registry) {
   if (!npmName) {
     return null;
   }
-  const registryUrl = registry || getDefaultRegistry(true);
+  const registryUrl = registry || getDefaultRegistry();
   const npmInfoUrl = urlJoin(registryUrl, npmName);
-  log.verbose('npmInfoUrl1', npmInfoUrl)
+  console.log('npmInfoUrl', npmInfoUrl)
   return axios.get(npmInfoUrl).then(function (response) {
     try {
       if (response.status === 200) {
         return response.data;
       }
     } catch (error) {
+      console.log('error', error)
       return Promise.reject(error);
     }
   });
@@ -51,7 +52,9 @@ function getSemverVersions(baseVersion, versions) {
 
 async function getNpmSemverVersion(baseVersion, npmName, registry) {
   const versions = await getNpmVersions(npmName, registry);
+  // console.log('versions', versions)
   const newVersions = getSemverVersions(baseVersion, versions);
+  // console.log('newVersions', newVersions)
   if (newVersions && newVersions.length > 0) {
     return newVersions[0];
   }
@@ -60,8 +63,13 @@ async function getNpmSemverVersion(baseVersion, npmName, registry) {
 
 async function getNpmLatestVersion(npmName, registry) {
   let versions = await getNpmVersions(npmName, registry);
+  // console.log('versions', versions)
   if (versions) {
-    return versions.sort((a, b) => semver.gt(b, a))[0];
+    let newV = versions.sort((a, b) => semver.gt(b, a))
+    // console.log('***ver', newV)
+    // console.log('***ver', newV[versions.length - 1])
+    // return newV[0];
+    return newV[versions.length - 1];
   }
   return null;
 }

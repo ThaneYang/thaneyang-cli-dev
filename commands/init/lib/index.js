@@ -240,7 +240,7 @@ class InitCommand extends Command {
   async prepare() {
     // 0. 判断项目模板是否存在
     const template = await getProjectTemplate();
-    console.log('template', template)
+    // console.log('template', template)
     if (!template || template.length === 0) {
       throw new Error('项目模板不存在');
     }
