@@ -81,7 +81,7 @@ async function prepare() {
   checkRoot();
   checkUserHome();
   checkEnv();
-  // await checkGlobalUpdate();
+  await checkGlobalUpdate();
 }
 
 async function checkGlobalUpdate() {
