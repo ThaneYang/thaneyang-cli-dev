@@ -69,8 +69,8 @@ class Package {
     return npminstall({
       root: this.targetPath, // 模块路径
       storeDir: this.storeDir,
-      // registry: getDefaultRegistry(true), // init这个包有点奇怪，所以改为临时从官方镜像源中下载
-      registry: getDefaultRegistry(),
+      registry: getDefaultRegistry(true), // init这个包有点奇怪，所以改为临时从官方镜像源中下载
+      // registry: getDefaultRegistry(),
       pkgs: [{
         name: this.packageName,
         version: this.packageVersion,
@@ -91,7 +91,7 @@ class Package {
       await npminstall({
         root: this.targetPath,
         storeDir: this.storeDir,
-        registry: getDefaultRegistry(),
+        registry: getDefaultRegistry(true),
         pkgs: [{
           name: this.packageName,
           version: latestPackageVersion,
