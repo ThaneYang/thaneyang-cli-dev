@@ -8,9 +8,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
   "workspaces": [
     "core/cli",
     "core/exec",

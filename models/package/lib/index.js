@@ -109,9 +109,11 @@ class Package {
       // 1. 获取package.json所在目录
       console.log('package targetPath**', targetPath)
       const dir = pkgDir(targetPath); // 获取package.json所在的目录
+      console.log('dir', dir)
       if (dir) {
         // 2. 读取package.json
         const pkgFile = require(path.resolve(dir, 'package.json')); // require可以读取js json node
+        console.log('pkgFile', pkgFile)
         // 3. 寻找main/lib
         if (pkgFile && pkgFile.main) {
           // 4. 路径的兼容(macOS/windows)
