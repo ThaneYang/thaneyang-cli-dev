@@ -6,24 +6,24 @@ module.exports = function () {
   // });
   // 因为没有服务器，临时改为代码写死
   return Promise.resolve([
-    {
-      name: "vue2标准模版",
-      npmName: "yzw-cli-vue2-standard-template",
-      version: "1.0.0",
-      type: "normal",
-      installCommand: "cnpm install",
-      startCommand: "npm run serve",
-      tag: [
-        "project"
-      ],
-      ignore: [
-        "**/public/**"
-      ]
-    },
+    // {
+    //   name: "vue2标准模版",
+    //   npmName: "yzw-cli-vue2-standard-template",
+    //   version: "1.0.0",
+    //   type: "normal",
+    //   installCommand: "cnpm install",
+    //   startCommand: "npm run serve",
+    //   tag: [
+    //     "project"
+    //   ],
+    //   ignore: [
+    //     "**/public/**"
+    //   ]
+    // },
     {
       name: "vue3标准模版",
       npmName: "yzw-cli-vue3-standard-template",
-      version: "1.0.1",
+      version: "1.0.2",
       type: "normal",
       installCommand: "cnpm install",
       startCommand: "npm run serve",

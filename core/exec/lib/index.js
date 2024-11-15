@@ -38,7 +38,7 @@ async function exec() {
       packageName,
       packageVersion,
     });
-    // console.log('pkg', pkg)
+    log.verbose('pkg', pkg)
     if (await pkg.exists()) {
       log.verbose('更新package');
       // 更新package
@@ -80,7 +80,7 @@ async function exec() {
       args[args.length - 1] = o;
       // 通过targetPath传入的包地址，拿到可执行的入口文件index.js，通过require()的形式来执行
       const code = `require('${rootFile}').call(null, ${JSON.stringify(args)})`;
-      console.log('code', code)
+      log.verbose('code', code)
       const child = spawn('node', ['-e', code], {
         cwd: process.cwd(),
         stdio: 'inherit',

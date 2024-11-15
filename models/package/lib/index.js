@@ -11,7 +11,7 @@ const { getDefaultRegistry, getNpmLatestVersion } = require('@yzw-cli-dev/get-np
 
 class Package {
   constructor(options) {
-    console.log('package options', options)
+    // console.log('package options', options)
     if (!options) {
       throw new Error('Package类的options参数不能为空！');
     }
@@ -50,7 +50,7 @@ class Package {
   // 判断当前Package是否存在
   async exists() {
     if (this.storeDir) {
-      console.log('this.cacheFilePath', this.cacheFilePath)
+      // console.log('this.cacheFilePath', this.cacheFilePath)
       await this.prepare();
       return pathExists(this.cacheFilePath);
     } else {
@@ -61,11 +61,11 @@ class Package {
   // 安装Package
   async install() {
     await this.prepare();
-    console.log('安装this.targetPath', this.targetPath)
-    console.log('安装this.storeDir', this.storeDir)
-    console.log('安装this.packageName', this.packageName)
+    // console.log('安装this.targetPath', this.targetPath)
+    // console.log('安装this.storeDir', this.storeDir)
     // this.packageVersion = '1.0.9' // init这个包有点奇怪，临时设置版本号
-    console.log('安装this.packageVersion', this.packageVersion)
+    // console.log('安装this.packageVersion', this.packageVersion)
+    console.log('安装', this.packageName, this.packageVersion)
     return npminstall({
       root: this.targetPath, // 模块路径
       storeDir: this.storeDir,
@@ -107,13 +107,13 @@ class Package {
   getRootFilePath() {
     function _getRootFile(targetPath) {
       // 1. 获取package.json所在目录
-      console.log('package targetPath**', targetPath)
+      // console.log('package targetPath**', targetPath)
       const dir = pkgDir(targetPath); // 获取package.json所在的目录
-      console.log('dir', dir)
+      // console.log('dir', dir)
       if (dir) {
         // 2. 读取package.json
         const pkgFile = require(path.resolve(dir, 'package.json')); // require可以读取js json node
-        console.log('pkgFile', pkgFile)
+        // console.log('pkgFile', pkgFile)
         // 3. 寻找main/lib
         if (pkgFile && pkgFile.main) {
           // 4. 路径的兼容(macOS/windows)

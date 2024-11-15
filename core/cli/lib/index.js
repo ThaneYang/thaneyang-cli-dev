@@ -21,7 +21,6 @@ async function core() {
     await prepare();
     registerCommand();
   } catch (e) {
-    console.log('e', e)
     log.error(e.message);
     if (program.debug) {
       console.log(e);
@@ -57,7 +56,7 @@ function registerCommand() {
   // 指定targetPath
   program.on('option:targetPath', function () {
     process.env.CLI_TARGET_PATH = program.targetPath;
-    console.log('process.env.CLI_TARGET_PATH', process.env.CLI_TARGET_PATH)
+    log.verbose('process.env.CLI_TARGET_PATH', process.env.CLI_TARGET_PATH)
   });
 
   // 对未知命令监听
@@ -92,7 +91,7 @@ async function checkGlobalUpdate() {
   const npmName = pkg.name;
   const { getNpmSemverVersion } = require('@yzw-cli-dev/get-npm-info');
   const lastVersion = await getNpmSemverVersion(currentVersion, npmName);
-  console.log('lastVersion', lastVersion)
+  log.verbose('lastVersion', lastVersion)
   if (lastVersion && semver.gt(lastVersion, currentVersion)) {
     log.warn(colors.yellow(`请手动更新 ${npmName}，当前版本：${currentVersion}，最新版本：${lastVersion}
                 更新命令： npm install -g ${npmName}`));
@@ -120,11 +119,11 @@ function createDefaultConfig() {
     cliConfig['cliHome'] = path.join(userHome, constant.DEFAULT_CLI_HOME);
   }
   process.env.CLI_HOME_PATH = cliConfig.cliHome;
-  console.log('process.env.CLI_HOME_PATH', process.env.CLI_HOME_PATH)
+  log.verbose('process.env.CLI_HOME_PATH', process.env.CLI_HOME_PATH)
 }
 
 function checkUserHome() {
-  console.log('userHome', userHome)
+  log.verbose('userHome', userHome)
   if (!userHome || !pathExists(userHome)) {
     throw new Error(colors.red('当前登录用户主目录不存在！'));
   }
@@ -133,7 +132,7 @@ function checkUserHome() {
 function checkRoot() {
   const rootCheck = require('root-check');
   rootCheck();
-  console.log(process.geteuid()) // 0代表root
+  log.verbose(process.geteuid()) // 0代表root
 }
 
 function checkPkgVersion() {
