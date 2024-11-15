@@ -31,7 +31,8 @@ module.exports = function () {
         "project"
       ],
       ignore: [
-        "**/public/**"
+        "**/public/**",
+        "index.html"
       ]
     },
     {
@@ -45,7 +46,8 @@ module.exports = function () {
         "project"
       ],
       ignore: [
-        "**/public/**"
+        "**/public/**",
+        "index.html"
       ]
     }
   ])

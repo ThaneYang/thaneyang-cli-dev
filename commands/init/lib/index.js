@@ -105,6 +105,7 @@ class InitCommand extends Command {
     const dir = process.cwd();
     const projectInfo = this.projectInfo;
     log.verbose('ejsRender projectInfo', projectInfo);
+    log.verbose('ejsRender options', options);
     return new Promise((resolve, reject) => {
       // 通过glob获取所有文件
       glob('**', {
