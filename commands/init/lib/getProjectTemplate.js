@@ -23,7 +23,7 @@ module.exports = function () {
     {
       name: "vue3标准模版",
       npmName: "yzw-cli-vue3-standard-template",
-      version: "1.0.2",
+      version: "1.0.3",
       type: "normal",
       installCommand: "cnpm install",
       startCommand: "npm run serve",
@@ -32,6 +32,7 @@ module.exports = function () {
       ],
       ignore: [
         "**/public/**",
+        "**/index.html",
         "index.html"
       ]
     },
@@ -47,6 +48,7 @@ module.exports = function () {
       ],
       ignore: [
         "**/public/**",
+        "**/index.html",
         "index.html"
       ]
     }
