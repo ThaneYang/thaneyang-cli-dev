@@ -122,8 +122,10 @@ class InitCommand extends Command {
             // 通过ejs进行渲染
             ejs.renderFile(filePath, projectInfo, {}, (err, result) => {
               if (err) {
+                // console.log(1, file)
                 reject1(err);
               } else {
+                // console.log(2, file)
                 // 这一步很重要，还需要重新写入才生效
                 fse.writeFileSync(filePath, result);
                 resolve1(result);
@@ -160,6 +162,7 @@ class InitCommand extends Command {
     }
     const templateIgnore = this.templateInfo.ignore || [];
     const ignore = ['**/node_modules/**', ...templateIgnore];
+    log.verbose('ignore', ignore)
     await this.ejsRender({ ignore });
     const { installCommand, startCommand } = this.templateInfo;
     // 依赖安装
