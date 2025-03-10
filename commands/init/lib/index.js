@@ -23,7 +23,7 @@ const TEMPLATE_TYPE_CUSTOM = 'custom';
 
 const WHITE_COMMAND = ['npm', 'cnpm'];
 
-
+// 这里继承了@yzw-cli-dev/command，也就是models/command/index.js，所以会先执行init再执行exec
 class InitCommand extends Command {
   init() {
     this.projectName = this._argv[0] || '';
@@ -33,6 +33,7 @@ class InitCommand extends Command {
   }
 
   async exec() {
+    log.verbose('exec***');
     try {
       // 1. 准备阶段
       const projectInfo = await this.prepare();
@@ -416,6 +417,19 @@ class InitCommand extends Command {
     return projectInfo;
   }
 
+  /*************  ✨ Codeium Command ⭐  *************/
+  /**
+   * Checks if the specified directory is empty.
+   * 
+   * This function reads the contents of the directory at the given path,
+   * filters out hidden files (files starting with a dot) and the 'node_modules' directory,
+   * and then determines if there are any remaining files.
+   * 
+   * @param {string} localPath - The path to the directory to check.
+   * @returns {boolean} - Returns true if the directory is empty (excluding hidden files and 'node_modules'); otherwise, false.
+   */
+
+  /******  66ea9845-089a-4273-80ca-3be11e8f0d25  *******/
   isDirEmpty(localPath) {
     let fileList = fs.readdirSync(localPath);
     // 文件过滤的逻辑
