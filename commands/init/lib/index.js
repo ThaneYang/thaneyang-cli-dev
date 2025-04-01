@@ -117,26 +117,42 @@ class InitCommand extends Command {
         if (err) {
           reject(err);
         }
-        Promise.all(files.map(file => {
-          const filePath = path.join(dir, file);
-          return new Promise((resolve1, reject1) => {
-            // 通过ejs进行渲染
-            ejs.renderFile(filePath, projectInfo, {}, (err, result) => {
-              if (err) {
-                // console.log(1, file)
-                reject1(err);
-              } else {
-                // console.log(2, file)
-                // 这一步很重要，还需要重新写入才生效
-                fse.writeFileSync(filePath, result);
-                resolve1(result);
-              }
+
+        // 使用glob找.env文件
+        glob('./**/.env', {}, function (err, files2) {
+          // 假设我们只有一个.env文件或者你知道确切的文件路径
+          if (files2 && files2.length > 0) {
+            const envFilePath = files2[0]; // 或者直接指定路径，例如 path.join(__dirname, '.env')
+            log.verbose('Found .env file at:', envFilePath);
+            log.verbose('files', files.length);
+            files.push(envFilePath)
+            log.verbose('files', files.length);
+          } else {
+            log.verbose('No .env file found.');
+          }
+
+          Promise.all(files.map(file => {
+            const filePath = path.join(dir, file);
+            return new Promise((resolve1, reject1) => {
+              // 通过ejs进行渲染
+              ejs.renderFile(filePath, projectInfo, {}, (err, result) => {
+                if (err) {
+                  // console.log(1, file)
+                  reject1(err);
+                } else {
+                  // console.log(2, file)
+                  // 这一步很重要，还需要重新写入才生效
+                  fse.writeFileSync(filePath, result);
+                  resolve1(result);
+                }
+              });
             });
+          })).then(() => {
+            resolve();
+          }).catch(err => {
+            reject(err);
           });
-        })).then(() => {
-          resolve();
-        }).catch(err => {
-          reject(err);
+
         });
       });
     });
@@ -363,6 +379,15 @@ class InitCommand extends Command {
       },
     },
       {
+        type: 'input',
+        name: 'projectChineseName',
+        message: `请输入${title}中文名称`,
+        default: '后台管理系统',
+        filter: function (v) {
+          return v;
+        },
+      },
+      {
         type: 'list',
         name: 'projectTemplate',
         message: `请选择${title}模板`,
@@ -410,6 +435,9 @@ class InitCommand extends Command {
     }
     if (projectInfo.projectVersion) {
       projectInfo.version = projectInfo.projectVersion;
+    }
+    if (projectInfo.projectChineseName) {
+      projectInfo.projectChineseName = projectInfo.projectChineseName;
     }
     if (projectInfo.componentDescription) {
       projectInfo.description = projectInfo.componentDescription;
