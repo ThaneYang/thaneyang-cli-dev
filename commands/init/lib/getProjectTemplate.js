@@ -30,7 +30,7 @@ module.exports = function () {
     {
       name: "vue3标准模版",
       npmName: "yzw-cli-vue3-standard-template",
-      version: "1.0.8",
+      version: "1.0.9",
       type: "normal",
       installCommand: "cnpm install",
       startCommand: "npm run serve",
